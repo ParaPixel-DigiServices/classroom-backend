@@ -3,8 +3,11 @@
   "trailingSlash": false,
   "builds": [
     {
-      "src": "api/index.ts",
-      "use": "@vercel/node"
+      "src": "package.json",
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": ["src/**", "api/**"]
+      }
     }
   ],
   "rewrites": [{ "source": "/(.*)", "destination": "/api" }]

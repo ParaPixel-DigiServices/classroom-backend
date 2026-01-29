@@ -38,11 +38,4 @@ app.get("/", (req, res) => {
   res.send("Backend server is running!");
 });
 
-// Only listen locally — Vercel handles this in production
-if (process.env.NODE_ENV !== "production") {
-  app.listen(PORT, () => {
-    console.log(`Server running at http://localhost:${PORT}`);
-  });
-}
-
 export default app;
